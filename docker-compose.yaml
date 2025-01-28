@@ -46,9 +46,6 @@ services:
       - perplexica-network
     restart: unless-stopped
 
-networks:
-  perplexica-network:
-
 volumes:
   backend-dbstore:
   uploads:
