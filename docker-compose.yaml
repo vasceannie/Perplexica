@@ -3,8 +3,8 @@ services:
     image: docker.io/searxng/searxng:latest
     volumes:
       - ./searxng:/etc/searxng:rw
-    ports:
-      - 4000:8080
+    expose:
+      - 8080
     networks:
       - perplexica-network
     restart: unless-stopped
@@ -18,8 +18,8 @@ services:
       - SEARXNG_API_URL=http://searxng:8080
     depends_on:
       - searxng
-    ports:
-      - 3001:3001
+    expose:
+      - 3001
     volumes:
       - backend-dbstore:/home/perplexica/data
       - uploads:/home/perplexica/uploads
@@ -40,8 +40,8 @@ services:
     image: itzcrazykns1337/perplexica-frontend:main
     depends_on:
       - perplexica-backend
-    ports:
-      - 3000:3000
+    expose:
+      - 3000
     networks:
       - perplexica-network
     restart: unless-stopped
