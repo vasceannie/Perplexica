@@ -15,3 +15,5 @@ server:
 engines:
   - name: wolframalpha
     disabled: false
+  - name: public domain image archive
+    disabled: false
