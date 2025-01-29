@@ -2,7 +2,7 @@ services:
   searxng:
     image: docker.io/searxng/searxng:latest
     volumes:
-      - /srv/repos/searxng:/etc/searxng:rw
+      - /srv/repos/perplexica/searxng:/etc/searxng:rw
     expose:
       - 8080
     networks:
